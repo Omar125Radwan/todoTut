@@ -1,0 +1,38 @@
+
+<ion-content class="ion-padding">
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-sm="12" size-md="6">
+      <h2>
+        <ion-text>
+          MY TODO
+        </ion-text>
+      </h2>
+
+      <p>
+        <ion-text>
+          sign in to continue
+        </ion-text>
+      </p>
+
+      <div class="form">
+        <form [formGroup]="form">
+          <ion-item>
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-input formControlName="username" type="text" placeholder="username"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+            <ion-input formControlName="password" type="password" placeholder="password"></ion-input>
+          </ion-item>
+
+          <ion-button [disabled]="!form.valid" (click)="onSubmit()" expand="block" shape="round" mode="ios">
+            Login
+          </ion-button>
+        </form>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
